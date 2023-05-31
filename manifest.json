@@ -1,8 +1,10 @@
 {
-  "name": "Nhymxu - Social ghost",
-  "description": "Blocks \"seen\" marks on Facebook Stories and Instagram Stories.",
-  "version": "1.0.0",
   "manifest_version": 2,
+
+  "name": "Nhymxu - Social ghost",
+  "version": "0.1.0",
+  "description": "Blocks \"seen\" marks on Facebook Stories and Instagram Stories.",
+
   "background": {
     "scripts": ["index.js"]
   },
@@ -16,7 +18,7 @@
     "name": "Dung Nguyen (nhymxu)",
     "url": "https://dungnt.net"
   },
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
       "id": "nhymxu-social-ghost@social.ghost"
     }

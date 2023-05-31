@@ -1,5 +1,6 @@
 const URLS_TO_CANCEL = [
-    '*://*.instagram.com/api/graphql'
+    '*://*.instagram.com/api/graphql',
+    '*://*.facebook.com/api/graphql/',
 ]
 
 const isNodeEnv = typeof exports !== 'undefined'
@@ -18,7 +19,10 @@ const handleRequest = (details) => {
         if(formData) {
             if (
                 formData.hasOwnProperty("fb_api_req_friendly_name") 
-                && formData.fb_api_req_friendly_name.includes("PolarisAPIReelSeenMutation")
+                && (
+                    formData.fb_api_req_friendly_name.includes("PolarisAPIReelSeenMutation")
+                    || formData.fb_api_req_friendly_name.includes("storiesUpdateSeenStateMutation")
+                )
             ) {
                 cancel = true;
             }
