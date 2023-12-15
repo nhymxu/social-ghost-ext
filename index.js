@@ -18,10 +18,11 @@ const handleRequest = (details) => {
 
         if(formData) {
             if (
-                formData.hasOwnProperty("fb_api_req_friendly_name") 
+                formData.hasOwnProperty("fb_api_req_friendly_name")
                 && (
                     formData.fb_api_req_friendly_name.includes("PolarisAPIReelSeenMutation")
                     || formData.fb_api_req_friendly_name.includes("storiesUpdateSeenStateMutation")
+                    || formData.fb_api_req_friendly_name.includes("usePolarisStoriesV3SeenMutation")
                 )
             ) {
                 cancel = true;
