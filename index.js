@@ -1,5 +1,6 @@
 const URLS_TO_CANCEL = [
     '*://*.instagram.com/api/graphql',
+    '*://*.instagram.com/graphql/query',
     '*://*.facebook.com/api/graphql/',
 ]
 
