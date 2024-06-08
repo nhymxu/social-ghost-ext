@@ -22,9 +22,11 @@ const handleRequest = (details) => {
                 formData.hasOwnProperty("fb_api_req_friendly_name")
                 && (
                     formData.fb_api_req_friendly_name.includes("PolarisAPIReelSeenMutation")
+                    || formData.fb_api_req_friendly_name.includes("PolarisAPIReelSeenDirectMutation")
                     || formData.fb_api_req_friendly_name.includes("storiesUpdateSeenStateMutation")
                     || formData.fb_api_req_friendly_name.includes("usePolarisStoriesV3SeenMutation")
                     || formData.fb_api_req_friendly_name.includes("PolarisStoriesV3SeenMutation")
+                    || formData.fb_api_req_friendly_name.includes("PolarisStoriesV3SeenDirectMutation")
                 )
             ) {
                 cancel = true;
