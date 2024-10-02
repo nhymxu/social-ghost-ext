@@ -1,4 +1,4 @@
-const URLS_TO_CANCEL = [
+const URLS = [
     '*://*.instagram.com/api/graphql',
     '*://*.instagram.com/graphql/query',
     '*://*.facebook.com/api/graphql/',
@@ -40,7 +40,7 @@ const handleRequest = (details) => {
 const listenToRequests = () => {
     browser.webRequest.onBeforeRequest.addListener(
         handleRequest,
-        { urls: URLS_TO_CANCEL },
+        { urls: URLS },
         ['blocking', 'requestBody']
     );
 }
