@@ -21,6 +21,9 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "nhymxu-social-ghost@social.ghost"
+    },
+    "gecko_android": {
+      "id": "nhymxu-social-ghost@social.ghost"
     }
   }
 }
