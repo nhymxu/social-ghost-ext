@@ -6,6 +6,6 @@
         "lint": "web-ext lint"
     },
     "devDependencies": {
-        "web-ext": "^7.6.2"
+        "web-ext": "^8.3.0"
     }
 }
