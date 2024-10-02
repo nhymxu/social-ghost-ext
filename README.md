@@ -2,7 +2,7 @@
 
 A browser extension that blocks "seen" marks on Facebook stories and Instagram stories, because **privacy**.
 
-Thanks https://github.com/diessica/no-seen for starting and [dwiyatci](https://github.com/diessica/no-seen/issues/7#issuecomment-1565168654) for idea.
+Thanks [diessica/no-seen](https://github.com/diessica/no-seen) for starting and [dwiyatci](https://github.com/diessica/no-seen/issues/7#issuecomment-1565168654) for idea.
 
 
 ## Support
