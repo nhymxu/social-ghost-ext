@@ -19,6 +19,6 @@ Please make sure to update tests as appropriate.
 
 - [diessica/no-seen](https://github.com/diessica/no-seen): start point
 - [dwiyatci](https://github.com/diessica/no-seen/issues/7#issuecomment-1565168654): init idea
-- @halilnevzat
-- @davidelofrese
-- @lacek
+- [halilnevzat](https://github.com/halilnevzat)
+- [davidelofrese](https://github.com/davidelofrese)
+- [lacek](https://github.com/lacek)
