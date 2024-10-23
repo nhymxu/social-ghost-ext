@@ -12,14 +12,12 @@ if (typeof browser === 'undefined' && !isNodeEnv) {
     browser = chrome
 }
 
-let isEnabled = true; // Default state
+let isEnabled = true;
 
-// Initialize extension state
 browser.storage.local.get('enabled', function (data) {
     isEnabled = data.enabled !== false;
 });
 
-// Listen for changes in the extension's enabled state
 browser.storage.onChanged.addListener((changes, area) => {
     if (area === 'local' && 'enabled' in changes) {
         isEnabled = changes.enabled.newValue;
