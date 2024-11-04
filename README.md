@@ -22,3 +22,4 @@ Please make sure to update tests as appropriate.
 - [halilnevzat](https://github.com/halilnevzat)
 - [davidelofrese](https://github.com/davidelofrese)
 - [lacek](https://github.com/lacek)
+- [tcortega](https://github.com/tcortega)
