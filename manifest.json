@@ -2,18 +2,28 @@
   "manifest_version": 2,
 
   "name": "Nhymxu - Social ghost",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "description": "Blocks \"seen\" marks on Facebook Stories and Instagram Stories.",
 
   "background": {
-    "scripts": ["index.js"]
+    "scripts": ["index.js"],
+    "persistent": true
   },
   "permissions": [
     "webRequest",
     "webRequestBlocking",
+    "storage",
     "*://*.facebook.com/*",
     "*://*.instagram.com/*"
   ],
+  "browser_action": {
+    "default_icon": "icon-disabled.png",
+    "default_title": "Nhymxu - Social ghost",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icon-enabled.png"
+  },
   "developer": {
     "name": "Dung Nguyen (nhymxu)",
     "url": "https://dungnt.net"

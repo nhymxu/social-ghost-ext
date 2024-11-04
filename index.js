@@ -12,12 +12,28 @@ if (typeof browser === 'undefined' && !isNodeEnv) {
     browser = chrome
 }
 
+let isEnabled = true;
+
+browser.storage.local.get('enabled', function (data) {
+    isEnabled = data.enabled !== false;
+});
+
+browser.storage.onChanged.addListener((changes, area) => {
+    if (area === 'local' && 'enabled' in changes) {
+        isEnabled = changes.enabled.newValue;
+    }
+});
+
 const handleRequest = (details) => {
-    if(details.method == "POST") {
+    if (!isEnabled) {
+        return { cancel: false };
+    }
+
+    if (details.method == "POST") {
         let formData = details.requestBody.formData;
         let cancel = false;
 
-        if(formData) {
+        if (formData) {
             if (
                 formData.hasOwnProperty("fb_api_req_friendly_name")
                 && (
@@ -33,8 +49,10 @@ const handleRequest = (details) => {
             }
         }
 
-        return {cancel: cancel};
+        return { cancel: cancel };
     }
+
+    return { cancel: false };
 }
 
 const listenToRequests = () => {
